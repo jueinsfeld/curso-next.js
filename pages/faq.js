@@ -1,6 +1,7 @@
-import Link from "../src/components/Link"
-import { useEffect , useState } from 'react';
-import Head from 'next/head';
+import FAQScreen from "../src/screens/FAQScreen";
+
+
+export default FAQScreen;
 
 
 // getStaticProps serve para produção de sites estáticos 
@@ -27,33 +28,33 @@ export async function getStaticProps() {
 }
 
 
-export default function FAQPage({ faq }) {
-    console.log(faq);
-    // const [faq, setFaq] = useState([]);
-    // useEffect(() => {
+// export default function FAQPage({ faq }) {
+//     console.log(faq);
+//     // const [faq, setFaq] = useState([]);
+//     // useEffect(() => {
 
-    // }, []);
+//     // }, []);
 
-    return(
-        <div>
-            <Head>
-                <title>FAQ - Alura Cases Campanha</title>
-            </Head>
-            <h1>Alura Cases - Página de perguntas FAQ</h1>
-            <Link href="/">
-                Ir para a Home
-            </Link>
+//     return(
+//         <div>
+//             <Head>
+//                 <title>FAQ - Alura Cases Campanha</title>
+//             </Head>
+//             <h1>Alura Cases - Página de perguntas FAQ</h1>
+//             <Link href="/">
+//                 Ir para a Home
+//             </Link>
 
-            <ul>
-                {faq.map(({ answer, question }) => (
-                    <li key={question}>
-                        <article>
-                            <h2>{question}</h2>
-                            <p>{answer}</p>
-                        </article>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
-}
+//             <ul>
+//                 {faq.map(({ answer, question }) => (
+//                     <li key={question}>
+//                         <article>
+//                             <h2>{question}</h2>
+//                             <p>{answer}</p>
+//                         </article>
+//                     </li>
+//                 ))}
+//             </ul>
+//         </div>
+//     )
+// }
